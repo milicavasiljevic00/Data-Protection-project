@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="CryptoService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_ICryptoService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8080/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8080/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8080/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Collections" />
+      <xsd:import schemaLocation="http://localhost:8080/?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICryptoService_A51_EncryptBytes_InputMessage">
+    <wsdl:part name="parameters" element="tns:A51_EncryptBytes" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_A51_EncryptBytes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:A51_EncryptBytesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_A51_DecryptBytes_InputMessage">
+    <wsdl:part name="parameters" element="tns:A51_DecryptBytes" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_A51_DecryptBytes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:A51_DecryptBytesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_shiftRight_InputMessage">
+    <wsdl:part name="parameters" element="tns:shiftRight" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_shiftRight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:shiftRightResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_majority_vote_InputMessage">
+    <wsdl:part name="parameters" element="tns:majority_vote" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_majority_vote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:majority_voteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RSA_Encrypt_InputMessage">
+    <wsdl:part name="parameters" element="tns:RSA_Encrypt" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RSA_Encrypt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RSA_EncryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RSA_Decrypt_InputMessage">
+    <wsdl:part name="parameters" element="tns:RSA_Decrypt" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RSA_Decrypt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RSA_DecryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_GeneratePublicKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:GeneratePublicKey" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_GeneratePublicKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GeneratePublicKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_GCD_InputMessage">
+    <wsdl:part name="parameters" element="tns:GCD" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_GCD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GCDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_CFB_Encrypt_InputMessage">
+    <wsdl:part name="parameters" element="tns:CFB_Encrypt" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_CFB_Encrypt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CFB_EncryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_CFB_Decrypt_InputMessage">
+    <wsdl:part name="parameters" element="tns:CFB_Decrypt" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_CFB_Decrypt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CFB_DecryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_Mod_InputMessage">
+    <wsdl:part name="parameters" element="tns:Mod" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_Mod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_FindAllOccurrences_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllOccurrences" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_FindAllOccurrences_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllOccurrencesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RemoveAllDuplicates_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveAllDuplicates" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RemoveAllDuplicates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveAllDuplicatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RemoveOtherChars_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveOtherChars" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RemoveOtherChars_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveOtherCharsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_AdjustOutput_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdjustOutput" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_AdjustOutput_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdjustOutputResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_Cipher_InputMessage">
+    <wsdl:part name="parameters" element="tns:Cipher" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_Cipher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CipherResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_PlayFair_Encrypt_InputMessage">
+    <wsdl:part name="parameters" element="tns:PlayFair_Encrypt" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_PlayFair_Encrypt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PlayFair_EncryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_PlayFair_Decrypt_InputMessage">
+    <wsdl:part name="parameters" element="tns:PlayFair_Decrypt" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_PlayFair_Decrypt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PlayFair_DecryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_PlayFair_EncryptParallel_InputMessage">
+    <wsdl:part name="parameters" element="tns:PlayFair_EncryptParallel" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_PlayFair_EncryptParallel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PlayFair_EncryptParallelResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_WriteBlocksToFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:WriteBlocksToFile" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_WriteBlocksToFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WriteBlocksToFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_SHA2Hash_InputMessage">
+    <wsdl:part name="parameters" element="tns:SHA2Hash" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_SHA2Hash_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SHA2HashResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_loadBytes_InputMessage">
+    <wsdl:part name="parameters" element="tns:loadBytes" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_loadBytes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loadBytesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_saveBytes_InputMessage">
+    <wsdl:part name="parameters" element="tns:saveBytes" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_saveBytes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:saveBytesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_saveText_InputMessage">
+    <wsdl:part name="parameters" element="tns:saveText" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_saveText_OutputMessage">
+    <wsdl:part name="parameters" element="tns:saveTextResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_readText_InputMessage">
+    <wsdl:part name="parameters" element="tns:readText" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_readText_OutputMessage">
+    <wsdl:part name="parameters" element="tns:readTextResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_writeToFileInt_InputMessage">
+    <wsdl:part name="parameters" element="tns:writeToFileInt" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_writeToFileInt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:writeToFileIntResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_readFromFileInt_InputMessage">
+    <wsdl:part name="parameters" element="tns:readFromFileInt" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_readFromFileInt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:readFromFileIntResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_loadBitmap_InputMessage">
+    <wsdl:part name="parameters" element="tns:loadBitmap" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_loadBitmap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loadBitmapResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_saveBitmap_InputMessage">
+    <wsdl:part name="parameters" element="tns:saveBitmap" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_saveBitmap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:saveBitmapResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICryptoService">
+    <wsdl:operation name="A51_EncryptBytes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/A51_EncryptBytes" message="tns:ICryptoService_A51_EncryptBytes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/A51_EncryptBytesResponse" message="tns:ICryptoService_A51_EncryptBytes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="A51_DecryptBytes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/A51_DecryptBytes" message="tns:ICryptoService_A51_DecryptBytes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/A51_DecryptBytesResponse" message="tns:ICryptoService_A51_DecryptBytes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="shiftRight">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/shiftRight" message="tns:ICryptoService_shiftRight_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/shiftRightResponse" message="tns:ICryptoService_shiftRight_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="majority_vote">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/majority_vote" message="tns:ICryptoService_majority_vote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/majority_voteResponse" message="tns:ICryptoService_majority_vote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RSA_Encrypt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/RSA_Encrypt" message="tns:ICryptoService_RSA_Encrypt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/RSA_EncryptResponse" message="tns:ICryptoService_RSA_Encrypt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RSA_Decrypt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/RSA_Decrypt" message="tns:ICryptoService_RSA_Decrypt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/RSA_DecryptResponse" message="tns:ICryptoService_RSA_Decrypt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePublicKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/GeneratePublicKey" message="tns:ICryptoService_GeneratePublicKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/GeneratePublicKeyResponse" message="tns:ICryptoService_GeneratePublicKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GCD">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/GCD" message="tns:ICryptoService_GCD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/GCDResponse" message="tns:ICryptoService_GCD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CFB_Encrypt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/CFB_Encrypt" message="tns:ICryptoService_CFB_Encrypt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/CFB_EncryptResponse" message="tns:ICryptoService_CFB_Encrypt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CFB_Decrypt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/CFB_Decrypt" message="tns:ICryptoService_CFB_Decrypt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/CFB_DecryptResponse" message="tns:ICryptoService_CFB_Decrypt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Mod">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/Mod" message="tns:ICryptoService_Mod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/ModResponse" message="tns:ICryptoService_Mod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAllOccurrences">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/FindAllOccurrences" message="tns:ICryptoService_FindAllOccurrences_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/FindAllOccurrencesResponse" message="tns:ICryptoService_FindAllOccurrences_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAllDuplicates">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/RemoveAllDuplicates" message="tns:ICryptoService_RemoveAllDuplicates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/RemoveAllDuplicatesResponse" message="tns:ICryptoService_RemoveAllDuplicates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveOtherChars">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/RemoveOtherChars" message="tns:ICryptoService_RemoveOtherChars_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/RemoveOtherCharsResponse" message="tns:ICryptoService_RemoveOtherChars_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AdjustOutput">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/AdjustOutput" message="tns:ICryptoService_AdjustOutput_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/AdjustOutputResponse" message="tns:ICryptoService_AdjustOutput_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Cipher">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/Cipher" message="tns:ICryptoService_Cipher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/CipherResponse" message="tns:ICryptoService_Cipher_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PlayFair_Encrypt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/PlayFair_Encrypt" message="tns:ICryptoService_PlayFair_Encrypt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/PlayFair_EncryptResponse" message="tns:ICryptoService_PlayFair_Encrypt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PlayFair_Decrypt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/PlayFair_Decrypt" message="tns:ICryptoService_PlayFair_Decrypt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/PlayFair_DecryptResponse" message="tns:ICryptoService_PlayFair_Decrypt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PlayFair_EncryptParallel">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/PlayFair_EncryptParallel" message="tns:ICryptoService_PlayFair_EncryptParallel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/PlayFair_EncryptParallelResponse" message="tns:ICryptoService_PlayFair_EncryptParallel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteBlocksToFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/WriteBlocksToFile" message="tns:ICryptoService_WriteBlocksToFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/WriteBlocksToFileResponse" message="tns:ICryptoService_WriteBlocksToFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SHA2Hash">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/SHA2Hash" message="tns:ICryptoService_SHA2Hash_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/SHA2HashResponse" message="tns:ICryptoService_SHA2Hash_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="loadBytes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/loadBytes" message="tns:ICryptoService_loadBytes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/loadBytesResponse" message="tns:ICryptoService_loadBytes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveBytes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/saveBytes" message="tns:ICryptoService_saveBytes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/saveBytesResponse" message="tns:ICryptoService_saveBytes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveText">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/saveText" message="tns:ICryptoService_saveText_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/saveTextResponse" message="tns:ICryptoService_saveText_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="readText">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/readText" message="tns:ICryptoService_readText_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/readTextResponse" message="tns:ICryptoService_readText_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="writeToFileInt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/writeToFileInt" message="tns:ICryptoService_writeToFileInt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/writeToFileIntResponse" message="tns:ICryptoService_writeToFileInt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="readFromFileInt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/readFromFileInt" message="tns:ICryptoService_readFromFileInt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/readFromFileIntResponse" message="tns:ICryptoService_readFromFileInt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="loadBitmap">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/loadBitmap" message="tns:ICryptoService_loadBitmap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/loadBitmapResponse" message="tns:ICryptoService_loadBitmap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveBitmap">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/saveBitmap" message="tns:ICryptoService_saveBitmap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/saveBitmapResponse" message="tns:ICryptoService_saveBitmap_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_ICryptoService" type="tns:ICryptoService">
+    <wsp:PolicyReference URI="#NetTcpBinding_ICryptoService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="A51_EncryptBytes">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/A51_EncryptBytes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="A51_DecryptBytes">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/A51_DecryptBytes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="shiftRight">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/shiftRight" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="majority_vote">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/majority_vote" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RSA_Encrypt">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/RSA_Encrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RSA_Decrypt">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/RSA_Decrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePublicKey">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/GeneratePublicKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GCD">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/GCD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CFB_Encrypt">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/CFB_Encrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CFB_Decrypt">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/CFB_Decrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mod">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/Mod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAllOccurrences">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/FindAllOccurrences" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAllDuplicates">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/RemoveAllDuplicates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveOtherChars">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/RemoveOtherChars" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdjustOutput">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/AdjustOutput" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cipher">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/Cipher" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PlayFair_Encrypt">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/PlayFair_Encrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PlayFair_Decrypt">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/PlayFair_Decrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PlayFair_EncryptParallel">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/PlayFair_EncryptParallel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WriteBlocksToFile">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/WriteBlocksToFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SHA2Hash">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/SHA2Hash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadBytes">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/loadBytes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveBytes">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/saveBytes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveText">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/saveText" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readText">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/readText" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="writeToFileInt">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/writeToFileInt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readFromFileInt">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/readFromFileInt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadBitmap">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/loadBitmap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveBitmap">
+      <soap12:operation soapAction="http://tempuri.org/ICryptoService/saveBitmap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CryptoService">
+    <wsdl:port name="NetTcpBinding_ICryptoService" binding="tns:NetTcpBinding_ICryptoService">
+      <soap12:address location="net.tcp://localhost:8090/CryptoService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:8090/CryptoService</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>DESKTOP-FTHUBTO\Vasiljevic</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

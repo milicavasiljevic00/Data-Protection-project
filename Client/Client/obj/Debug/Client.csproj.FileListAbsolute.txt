@@ -1,0 +1,33 @@
+E:\7. semestar\Zastita informacija\Client\Client\bin\Debug\Client.exe.config
+E:\7. semestar\Zastita informacija\Client\Client\bin\Debug\Client.exe
+E:\7. semestar\Zastita informacija\Client\Client\bin\Debug\Client.pdb
+E:\7. semestar\Zastita informacija\Client\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+E:\7. semestar\Zastita informacija\Client\Client\obj\Debug\Client.csproj.SuggestedBindingRedirects.cache
+E:\7. semestar\Zastita informacija\Client\Client\obj\Debug\Client.Form1.resources
+E:\7. semestar\Zastita informacija\Client\Client\obj\Debug\Client.Properties.Resources.resources
+E:\7. semestar\Zastita informacija\Client\Client\obj\Debug\Client.csproj.GenerateResource.cache
+E:\7. semestar\Zastita informacija\Client\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+E:\7. semestar\Zastita informacija\Client\Client\obj\Debug\Client.exe
+E:\7. semestar\Zastita informacija\Client\Client\obj\Debug\Client.pdb
+C:\Zastita informacija\Client\Client\bin\Debug\Client.exe.config
+C:\Zastita informacija\Client\Client\bin\Debug\Client.exe
+C:\Zastita informacija\Client\Client\bin\Debug\Client.pdb
+C:\Zastita informacija\Client\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Zastita informacija\Client\Client\obj\Debug\Client.csproj.SuggestedBindingRedirects.cache
+C:\Zastita informacija\Client\Client\obj\Debug\Client.Form1.resources
+C:\Zastita informacija\Client\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Zastita informacija\Client\Client\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Zastita informacija\Client\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Zastita informacija\Client\Client\obj\Debug\Client.exe
+C:\Zastita informacija\Client\Client\obj\Debug\Client.pdb
+C:\Users\Vasiljevic\Zastita\Client\Client\bin\Debug\Client.exe.config
+C:\Users\Vasiljevic\Zastita\Client\Client\bin\Debug\Client.exe
+C:\Users\Vasiljevic\Zastita\Client\Client\bin\Debug\Client.pdb
+C:\Users\Vasiljevic\Zastita\Client\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\Vasiljevic\Zastita\Client\Client\obj\Debug\Client.csproj.SuggestedBindingRedirects.cache
+C:\Users\Vasiljevic\Zastita\Client\Client\obj\Debug\Client.Form1.resources
+C:\Users\Vasiljevic\Zastita\Client\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\Vasiljevic\Zastita\Client\Client\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\Vasiljevic\Zastita\Client\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\Vasiljevic\Zastita\Client\Client\obj\Debug\Client.exe
+C:\Users\Vasiljevic\Zastita\Client\Client\obj\Debug\Client.pdb

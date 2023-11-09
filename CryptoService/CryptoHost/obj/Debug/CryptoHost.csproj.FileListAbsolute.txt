@@ -1,0 +1,45 @@
+E:\7. semestar\Zastita informacija\CryptoService\CryptoHost\bin\Debug\CryptoHost.exe.config
+E:\7. semestar\Zastita informacija\CryptoService\CryptoHost\bin\Debug\CryptoHost.exe
+E:\7. semestar\Zastita informacija\CryptoService\CryptoHost\bin\Debug\CryptoHost.pdb
+E:\7. semestar\Zastita informacija\CryptoService\CryptoHost\bin\Debug\CryptoService.dll
+E:\7. semestar\Zastita informacija\CryptoService\CryptoHost\bin\Debug\CryptoService.pdb
+E:\7. semestar\Zastita informacija\CryptoService\CryptoHost\bin\Debug\CryptoService.dll.config
+E:\7. semestar\Zastita informacija\CryptoService\CryptoHost\obj\Debug\CryptoHost.csproj.AssemblyReference.cache
+E:\7. semestar\Zastita informacija\CryptoService\CryptoHost\obj\Debug\CryptoHost.csproj.SuggestedBindingRedirects.cache
+E:\7. semestar\Zastita informacija\CryptoService\CryptoHost\obj\Debug\CryptoHost.Form1.resources
+E:\7. semestar\Zastita informacija\CryptoService\CryptoHost\obj\Debug\CryptoHost.Properties.Resources.resources
+E:\7. semestar\Zastita informacija\CryptoService\CryptoHost\obj\Debug\CryptoHost.csproj.GenerateResource.cache
+E:\7. semestar\Zastita informacija\CryptoService\CryptoHost\obj\Debug\CryptoHost.csproj.CoreCompileInputs.cache
+E:\7. semestar\Zastita informacija\CryptoService\CryptoHost\obj\Debug\CryptoHost.csproj.CopyComplete
+E:\7. semestar\Zastita informacija\CryptoService\CryptoHost\obj\Debug\CryptoHost.exe
+E:\7. semestar\Zastita informacija\CryptoService\CryptoHost\obj\Debug\CryptoHost.pdb
+C:\Zastita informacija\CryptoService\CryptoHost\bin\Debug\CryptoHost.exe.config
+C:\Zastita informacija\CryptoService\CryptoHost\bin\Debug\CryptoHost.exe
+C:\Zastita informacija\CryptoService\CryptoHost\bin\Debug\CryptoHost.pdb
+C:\Zastita informacija\CryptoService\CryptoHost\bin\Debug\CryptoService.dll
+C:\Zastita informacija\CryptoService\CryptoHost\bin\Debug\CryptoService.pdb
+C:\Zastita informacija\CryptoService\CryptoHost\bin\Debug\CryptoService.dll.config
+C:\Zastita informacija\CryptoService\CryptoHost\obj\Debug\CryptoHost.csproj.AssemblyReference.cache
+C:\Zastita informacija\CryptoService\CryptoHost\obj\Debug\CryptoHost.csproj.SuggestedBindingRedirects.cache
+C:\Zastita informacija\CryptoService\CryptoHost\obj\Debug\CryptoHost.Form1.resources
+C:\Zastita informacija\CryptoService\CryptoHost\obj\Debug\CryptoHost.Properties.Resources.resources
+C:\Zastita informacija\CryptoService\CryptoHost\obj\Debug\CryptoHost.csproj.GenerateResource.cache
+C:\Zastita informacija\CryptoService\CryptoHost\obj\Debug\CryptoHost.csproj.CoreCompileInputs.cache
+C:\Zastita informacija\CryptoService\CryptoHost\obj\Debug\CryptoHost.csproj.CopyComplete
+C:\Zastita informacija\CryptoService\CryptoHost\obj\Debug\CryptoHost.exe
+C:\Zastita informacija\CryptoService\CryptoHost\obj\Debug\CryptoHost.pdb
+C:\Users\Vasiljevic\Zastita\CryptoService\CryptoHost\bin\Debug\CryptoHost.exe.config
+C:\Users\Vasiljevic\Zastita\CryptoService\CryptoHost\bin\Debug\CryptoHost.exe
+C:\Users\Vasiljevic\Zastita\CryptoService\CryptoHost\bin\Debug\CryptoHost.pdb
+C:\Users\Vasiljevic\Zastita\CryptoService\CryptoHost\bin\Debug\CryptoService.dll
+C:\Users\Vasiljevic\Zastita\CryptoService\CryptoHost\bin\Debug\CryptoService.pdb
+C:\Users\Vasiljevic\Zastita\CryptoService\CryptoHost\bin\Debug\CryptoService.dll.config
+C:\Users\Vasiljevic\Zastita\CryptoService\CryptoHost\obj\Debug\CryptoHost.csproj.AssemblyReference.cache
+C:\Users\Vasiljevic\Zastita\CryptoService\CryptoHost\obj\Debug\CryptoHost.csproj.SuggestedBindingRedirects.cache
+C:\Users\Vasiljevic\Zastita\CryptoService\CryptoHost\obj\Debug\CryptoHost.Form1.resources
+C:\Users\Vasiljevic\Zastita\CryptoService\CryptoHost\obj\Debug\CryptoHost.Properties.Resources.resources
+C:\Users\Vasiljevic\Zastita\CryptoService\CryptoHost\obj\Debug\CryptoHost.csproj.GenerateResource.cache
+C:\Users\Vasiljevic\Zastita\CryptoService\CryptoHost\obj\Debug\CryptoHost.csproj.CoreCompileInputs.cache
+C:\Users\Vasiljevic\Zastita\CryptoService\CryptoHost\obj\Debug\CryptoHost.csproj.CopyComplete
+C:\Users\Vasiljevic\Zastita\CryptoService\CryptoHost\obj\Debug\CryptoHost.exe
+C:\Users\Vasiljevic\Zastita\CryptoService\CryptoHost\obj\Debug\CryptoHost.pdb

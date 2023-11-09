@@ -1,0 +1,21 @@
+E:\7. semestar\Zastita informacija\CryptoService\CryptoService\bin\Debug\CryptoService.dll.config
+E:\7. semestar\Zastita informacija\CryptoService\CryptoService\bin\Debug\CryptoService.dll
+E:\7. semestar\Zastita informacija\CryptoService\CryptoService\bin\Debug\CryptoService.pdb
+E:\7. semestar\Zastita informacija\CryptoService\CryptoService\obj\Debug\CryptoService.csproj.AssemblyReference.cache
+E:\7. semestar\Zastita informacija\CryptoService\CryptoService\obj\Debug\CryptoService.csproj.CoreCompileInputs.cache
+E:\7. semestar\Zastita informacija\CryptoService\CryptoService\obj\Debug\CryptoService.dll
+E:\7. semestar\Zastita informacija\CryptoService\CryptoService\obj\Debug\CryptoService.pdb
+C:\Zastita informacija\CryptoService\CryptoService\bin\Debug\CryptoService.dll.config
+C:\Zastita informacija\CryptoService\CryptoService\bin\Debug\CryptoService.dll
+C:\Zastita informacija\CryptoService\CryptoService\bin\Debug\CryptoService.pdb
+C:\Zastita informacija\CryptoService\CryptoService\obj\Debug\CryptoService.csproj.AssemblyReference.cache
+C:\Zastita informacija\CryptoService\CryptoService\obj\Debug\CryptoService.csproj.CoreCompileInputs.cache
+C:\Zastita informacija\CryptoService\CryptoService\obj\Debug\CryptoService.dll
+C:\Zastita informacija\CryptoService\CryptoService\obj\Debug\CryptoService.pdb
+C:\Users\Vasiljevic\Zastita\CryptoService\CryptoService\bin\Debug\CryptoService.dll.config
+C:\Users\Vasiljevic\Zastita\CryptoService\CryptoService\bin\Debug\CryptoService.dll
+C:\Users\Vasiljevic\Zastita\CryptoService\CryptoService\bin\Debug\CryptoService.pdb
+C:\Users\Vasiljevic\Zastita\CryptoService\CryptoService\obj\Debug\CryptoService.csproj.AssemblyReference.cache
+C:\Users\Vasiljevic\Zastita\CryptoService\CryptoService\obj\Debug\CryptoService.csproj.CoreCompileInputs.cache
+C:\Users\Vasiljevic\Zastita\CryptoService\CryptoService\obj\Debug\CryptoService.dll
+C:\Users\Vasiljevic\Zastita\CryptoService\CryptoService\obj\Debug\CryptoService.pdb
